@@ -2,12 +2,12 @@
 This library is adoption of original library to Iroha cryptography.
 Major changes:
 - Altered signature digest algorithm from SHA512 to SHA3-512 
-- Altered prehashing digest algorithm from SHA512 to SAH3-256
+- Altered prehashing digest algorithm from SHA512 to SHA3-256
 - Removed the feature 'asm' due crate SHA3 do not contain it
 
 # Usage
 ```rust
-use ed25519_dalek::*;
+use ed25519_dalek_iroha::*;
 use rand::rngs::OsRng;
 
 fn foo() {
@@ -44,7 +44,7 @@ Documentation is available [here](https://docs.rs/ed25519-dalek).
 To install, add the following to your project's `Cargo.toml`:
 
 ```toml
-[dependencies.ed25519-dalek]
+[dependencies.ed25519-dalek-iroha]
 version = "1"
 ```
 
@@ -244,11 +244,12 @@ features.
 
 ## Nightly Compilers
 
-To cause your application to build `ed25519-dalek` with the nightly feature
+To cause your application to build `ed25519-dalek-iroha` with the nightly feature
+To cause your application to build `ed25519-dalek-iroha` with the nightly feature
 enabled by default, instead do:
 
 ```toml
-[dependencies.ed25519-dalek]
+[dependencies.ed25519-dalek-iroha]
 version = "1"
 features = ["nightly"]
 ```
@@ -259,7 +260,7 @@ to the `Cargo.toml`:
 
 ```toml
 [features]
-nightly = ["ed25519-dalek/nightly"]
+nightly = ["ed25519-dalek-iroha/nightly"]
 ```
 
 ## Serde
